@@ -1,0 +1,326 @@
+[
+    {
+        "id": 1,
+        "name": "Sekiro™: Shadows Die Twice",
+        "image": "./assets/images/sekiro.jpg",
+        "description": "In Sekiro™: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death.",
+        "price": 59.99,
+        "rating": 4,
+        "genres": ["Action", "Adventure"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 2,
+        "name": "DARK SOULS™: REMASTERED",
+        "image": "./assets/images/dark_souls_1.jpg",
+        "description": "DARK SOULS™: REMASTERED is a dark fantasy universe, tense dungeon crawling, fearsome enemy encounters and unique online interactions.",
+        "price": 39.99,
+        "rating": 4,
+        "genres": ["Action"],
+        "is_new": true,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 3,
+        "name": "DARK SOULS™ II: Scholar of the First Sin",
+        "image": "./assets/images/dark_souls_2.jpg",
+        "description": "DARK SOULS™ II: Scholar of the First Sin brings the franchise’s renowned obscurity & gripping gameplay to a new level.",
+        "price": 39.99,
+        "rating": 3,
+        "genres": ["Action", "RPG"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 4,
+        "name": "DARK SOULS™ III",
+        "image": "./assets/images/dark_souls_3.jpg",
+        "description": "DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. ",
+        "price": 59.99,
+        "rating": 4,
+        "genres": ["Action"],
+        "is_new": false,
+        "is_trending": true,
+        "is_discounted": false
+    },
+
+    {
+        "id": 5,
+        "name": "Strange Horticulture",
+        "image": "./assets/images/strange_horticulture.jpg",
+        "description": "Strange Horticulture is an occult puzzle game in which you play as the proprietor of a local plant store.",
+        "price": 14.79,
+        "rating": 5,
+        "genres": ["Adventure", "Indie", "Simulation"],
+        "is_new": false,
+        "is_trending": true,
+        "is_discounted": true
+    },
+
+    {
+        "id": 6,
+        "name": "Papers, Please",
+        "image": "./assets/images/paper_please.jpg",
+        "description": "In Papers, Please your job as immigration inspector is to control the flow of people entering the Arstotzkan side of Grestin from Kolechia.",
+        "price": 8.99,
+        "rating": 5,
+        "genres": ["Adventure", "Indie"],
+        "is_new": true,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 7,
+        "name": "Hollow Knight",
+        "image": "./assets/images/hollow_knight.jpg",
+        "description": "Hollow Knight is an epic action adventure through a vast ruined kingdom of insects and heroes.",
+        "price": 14.79,
+        "rating": 4,
+        "genres": ["Adventure", "Action", "Indie"],
+        "is_new": true,
+        "is_trending": true,
+        "is_discounted": true
+    },
+
+    {
+        "id": 8,
+        "name": "NARUTO: Ultimate Ninja STORM",
+        "image": "./assets/images/naruto_utimate_storm.jpg",
+        "description": "NARUTO: Ultimate Ninja STORM allows players to battle in full 3D across massive environments.",
+        "price": 19.99,
+        "rating": 2,
+        "genres": ["Adventure", "Action"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 9,
+        "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 2",
+        "image": "./assets/images/naruto_utimate_storm_2.jpg",
+        "description": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 2 is a tour de force of Naruto thrills and spills.",
+        "price": 19.99,
+        "rating": 3,
+        "genres": ["Adventure", "Action", "Strategy"],
+        "is_new": true,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 10,
+        "name": "Darksiders Warmastered Edition",
+        "image": "./assets/images/darksiders_warmastered.jpg",
+        "description": "Darksiders Warmastered Edition is about evil forces trying to bring the end of the world.",
+        "price": 19.99,
+        "rating": 1,
+        "genres": ["Adventure", "Action", "RPG"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 11,
+        "name": "Coloring Game 2",
+        "image": "./assets/images/coloring_game_2.jpg",
+        "description": "Coloring Game 2 is a sequel of the existing color-by-number game which so many users have liked.",
+        "price": 4.09,
+        "rating": 3,
+        "genres": ["Casual", "Indie"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 12,
+        "name": "Escape Simulator",
+        "image": "./assets/images/escape_simulator.jpg",
+        "description": "Escape Simulator is about exploring a set of highly interactive escape rooms.",
+        "price": 14.99,
+        "rating": 5,
+        "genres": ["Adventure", "Casual", "Indie", "Simulation"],
+        "is_new": true,
+        "is_trending": true,
+        "is_discounted": false
+    },
+
+    {
+        "id": 13,
+        "name": "The House of Da Vinci",
+        "image": "./assets/images/the_house_of_da_vinci.jpg",
+        "description": "The House of Da Vinci, a must-try 3D puzzle adventure game.",
+        "price": 19.99,
+        "rating": 2,
+        "genres": ["Adventure", "Indie", "Strategy"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 14,
+        "name": "Return of the Obra Dinn",
+        "image": "./assets/images/obra_dinn.jpg",
+        "description": "Return of the Obra Dinn is a first-person mystery adventure based on exploration and logical deduction.",
+        "price": 19.50,
+        "rating": 1,
+        "genres": ["Adventure", "Indie"],
+        "is_new": true,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 15,
+        "name": "Montaro",
+        "image": "./assets/images/montaro.jpg",
+        "description": "Montaro is a DOGE.",
+        "price": 0.99,
+        "rating": 5,
+        "genres": ["Adventure", "Action"],
+        "is_new": false,
+        "is_trending": true,
+        "is_discounted": false
+    },
+
+    {
+        "id": 16,
+        "name": "We Were Here",
+        "image": "./assets/images/we_were_here.jpg",
+        "description": "We Were Here is the free pilot episode in a series of cooperative standalone puzzle adventures.",
+        "price": 0.00,
+        "rating": 3,
+        "genres": ["Adventure", "Action", "Indie"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 17,
+        "name": "LoveChoice",
+        "image": "./assets/images/love_choice.jpg",
+        "description": "LoveChoice is a decision-based AVG.",
+        "price": 1.99,
+        "rating": 1,
+        "genres": ["Adventure", "RPG", "Indie", "Simulation"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 18,
+        "name": "Sudocats",
+        "image": "./assets/images/sudocats.jpg",
+        "description": "Sudoku for cat people.",
+        "price": 1.95,
+        "rating": 3,
+        "genres": ["Casual"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 19,
+        "name": "Cookie Clicker",
+        "image": "./assets/images/cookie_clicker.jpg",
+        "description": "Cookie Clicker is a game about making an absurd amount of cookies.",
+        "price": 3.99,
+        "rating": 4,
+        "genres": ["Casual", "Indie", "Simulation", "Strategy"],
+        "is_new": true,
+        "is_trending": true,
+        "is_discounted": false
+    },
+
+    {
+        "id": 20,
+        "name": "Cuphead",
+        "image": "./assets/images/cuphead.jpg",
+        "description": "Cuphead is a classic run and gun action game heavily focused on boss battles.",
+        "price": 19.99,
+        "rating": 5,
+        "genres": ["Indie", "Action"],
+        "is_new": false,
+        "is_trending": true,
+        "is_discounted": true
+    },
+
+    {
+        "id": 21,
+        "name": "Darkest Dungeon®",
+        "image": "./assets/images/darkest_dungeon.jpg",
+        "description": "Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring.",
+        "price": 24.50,
+        "rating": 5,
+        "genres": ["Indie", "RPG", "Strategy"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 22,
+        "name": "Dead Cells",
+        "image": "./assets/images/dead_cells.jpg",
+        "description": "Dead Cells is a rogue-lite, metroidvania inspired, action-platformer.",
+        "price": 24.99,
+        "rating": 4,
+        "genres": ["Adventure", "Action", "Indie"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 23,
+        "name": "Castle Crashers®",
+        "image": "./assets/images/castle_crashers.jpg",
+        "description": "Castle Crashers® is about hacking, slashing, and smashing your way to victory in this award winning 2D arcade adventure from The Behemoth!",
+        "price": 11.99,
+        "rating": 1,
+        "genres": ["Adventure", "Action", "Casual", "Indie"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": false
+    },
+
+    {
+        "id": 24,
+        "name": "Undertale",
+        "image": "./assets/images/undertale.jpg",
+        "description": "Undertale, the RPG game where you don't have to destroy anyone.",
+        "price": 9.99,
+        "rating": 5,
+        "genres": ["Indie", "RPG"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": true
+    },
+
+    {
+        "id": 25,
+        "name": "Squad",
+        "image": "./assets/images/squad.png",
+        "description": "Squad is a tactical FPS that provides authentic combat experiences through teamwork, constant communication, and realistic gameplay.",
+        "price": 44.99,
+        "rating": 3,
+        "genres": ["Indie", "Action", "Strategy"],
+        "is_new": false,
+        "is_trending": false,
+        "is_discounted": true
+    }
+]

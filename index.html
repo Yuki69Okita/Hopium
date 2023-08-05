@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopium</title>
+    <link rel="icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
+
+
+    <!-- FONTAWESOME -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;800&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- HEADER SECTION-->
+    <header>
+
+        <!-- NAVIGATION BAR -->
+        <nav class="nav_bar">
+            <a href="index.html"><img src="./assets/images/logo.png" alt="hopium_logo" class="logo"></a>
+            <div class="nav_links" id="top_nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <span class="text_separator">/</span>
+
+                    <li><a href="#new_and_trending_section">New & Trending</a></li>
+                    <span class="text_separator">/</span>
+
+                    <li><a href="#discount_section">Disconted</a></li>
+                    <span class="text_separator">/</span>
+
+                    <li><a href="#catalog_section">Catalog</a></li>
+                    <span class="text_separator">/</span>
+
+                    <li>
+                        <div class="icon">
+                            <div class="itemsCount"></div>
+                            <i class="fas fa-shopping-cart cartIcon"></i>
+                        </div>
+                        <a href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" class="toggle_btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+
+        <!-- HEADER TEXT -->
+        <div class="head_txt">
+            <h1>Hopium</h1>
+            <p>
+                Here you can buy a lot of games.
+                Good ones, bad ones and even games that you will never be good at.
+            </p>
+            <a href="#catalog_section"><button class="load_btn">See All Games</button></a>
+        </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main>
+        <!-- NEW & TRENDING -->
+        <section class="new_and_trending_section" id="new_and_trending_section">
+            <h1>New & Trending</h1>
+            <div class="container-fluid">
+                <div class="card-group justify-content-center" id="new_and_trending_div">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOUNT SECTION -->
+        <section class="discount_section" id="discount_section">
+            <h1>Discounted</h1>
+            <div class="container-fluid">
+                <div class="card-group justify-content-center" id="discounted_div">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG SECTION -->
+        <section class="catalog_section" id="catalog_section">
+            <h1>Catalog</h1>
+
+            <!-- SORTING -->
+            <div class="sorting" id="sorting_stuff">
+                <div class="btn-group" id="sort_btn">
+                    <button class="btn btn-primary btn-lg dropdown-toggle btn-dark" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select sorting by:
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item btn-lg" type="button" id="sort_a_z">Alphabetical a-z</button>
+                        <button class="dropdown-item btn-lg" type="button" id="sort_z_a">Alphabetical z-a</button>
+                        <button class="dropdown-item btn-lg" type="button" id="sort_p_asc">Price ascending</button>
+                        <button class="dropdown-item btn-lg" type="button" id="sort_p_dec">Price decending</button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item btn-lg" type="button" style="color: red;" id="sort_remove">Remove
+                            sorting</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FILTER DESCRIPTION -->
+            <div class="btn-group" id="filter_btn">
+                <button class="btn btn-primary btn-lg dropdown-toggle btn-dark" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter description:
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="filter_description">
+
+                        <div class="grid_item" id="head">
+                            <h2>Genres:</h2>
+                        </div>
+
+                        <div class="grid_item"  id="gi1">
+                            <h3>Adventure</h3>
+                            <p>The player assumes the role of a protagonist in an interactive story, driven by
+                                exploration
+                                and/or puzzle-solving.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi2">
+                            <h3>Action</h3>
+                            <p>Emphasizes physical challenges, including hand-eye coordination and reaction time.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi3">
+                            <h3>RPG</h3>
+                            <p>Each participant assumes the role of a character that can interact within the game's
+                                imaginary world.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi4">
+                            <h3>Indie</h3>
+                            <p>Games created by individuals or small teams who operate independently from major studios,
+                                both financially and creatively.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi5">
+                            <h3>Simulation</h3>
+                            <p>Are designed to mimic activities you'd see in the real world.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi6">
+                            <h3>Strategy</h3>
+                            <p>The players' uncoerced, and often autonomous, decision-making skills have a high
+                                significance
+                                in determining the outcome.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi7">
+                            <h3>Casual</h3>
+                            <p>Targeted at a mass market audience.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi8">
+                            <h3>Remove filters</h3>
+                            <p>Removing selected filter.</p>
+                        </div>
+
+                        <div class="grid_item" id="head2">
+                            <h2>Price:</h2>
+                        </div>
+
+                        <div class="grid_item" id="gi9">
+                            <h3>Price range</h3>
+                            <p>You can choose your price range.</p>
+                        </div>
+
+                        <div class="grid_item" id="gi10">
+                            <h3>Remove filters</h3>
+                            <p>Removing selected filter.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FILTERING -->
+            <div class="filter">
+                <h2>Genres:</h2>
+                <div class="geres_filter">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genres" id="adventure">
+                        <label class="form-check-label" for="adventure">
+                            Adventure
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="action">
+                        <label class="form-check-label" for="action">
+                            Action
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="rpg">
+                        <label class="form-check-label" for="rpg">
+                            RPG
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="indie">
+                        <label class="form-check-label" for="indie">
+                            Indie
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="simulation">
+                        <label class="form-check-label" for="simulation">
+                            Simulation
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="strategy">
+                        <label class="form-check-label" for="strategy">
+                            Strategy
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="casual">
+                        <label class="form-check-label" for="casual">
+                            Casual
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="genres" id="remove_genre" checked>
+                        <label class="form-check-label" for="remove_genre">
+                            Remove filters
+                        </label>
+                    </div>
+                </div>
+
+                <div class="price_filter">
+                    <h2>Price:</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prices" id="zero_five">
+                        <label class="form-check-label" for="zero_five">
+                            00.00€ - 05.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="five_ten">
+                        <label class="form-check-label" for="five_ten">
+                            05.00€ - 10.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="ten_twenty">
+                        <label class="form-check-label" for="ten_twenty">
+                            10.00€ - 20.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="twenty_thirty">
+                        <label class="form-check-label" for="twenty_thirty">
+                            20.00€ - 30.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="thirty_forty">
+                        <label class="form-check-label" for="thirty_forty">
+                            30.00€ - 40.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="forty_fifty">
+                        <label class="form-check-label" for="forty_fifty">
+                            40.00€ - 50.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="fifty_sixty">
+                        <label class="form-check-label" for="fifty_sixty">
+                            50.00€ - 60.00€
+                        </label><br>
+
+                        <input class="form-check-input" type="radio" name="prices" id="remove_price" checked>
+                        <label class="form-check-label" for="remove_price">
+                            Remove price filters
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid" id="content_container">
+                <div class="card-group justify-content-center" id="catalog_div">
+
+                </div>
+            </div>
+
+
+            <!-- LOAD MORE -->
+            <!-- <div class="load_more">
+                <button class="load_more_btn" id="load_more_btn">Load more &nbsp;
+                    &nbsp;<i class="fa fa-refresh"></i></button>
+            </div> -->
+
+        </section>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 pl-3 text-light">
+        <div class="col-md-5 d-flex align-items-center">
+            <a href="https://en.wikipedia.org/wiki/Terms_of_service"
+                class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+                style="color: white; padding-right: 10px;" target=”_blank”>
+                T&C
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Privacy Policy"
+                class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" style="color: white;"
+                target=”_blank”>
+                Privacy Policy
+            </a>
+        </div>
+
+        <span class="vm_span">© 2023 VM</span>
+
+        <ul class="nav col-md-5 justify-content-end list-unstyled d-flex">
+            <li class="ms-3" style="padding-right: 10px;">
+                Contact Us:
+            </li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://github.com/Yuki69Okita" target=”_blank”>
+                    <i class="fa fa-github" style="font-size:36px; color: white; padding-right: 10px;"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-body-secondary"
+                    href="https://www.linkedin.com/in/valentina-marinova-319a65247/" target=”_blank”>
+                    <i class="fa fa-linkedin-square" style="font-size:36px; color: white; padding-right: 10px;"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-body-secondary"
+                    href="https://steamuserimages-a.akamaihd.net/ugc/1794144861803240963/13F3F7D7078D953EA0FB4D477077342BB19D0C89/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+                    target=”_blank”>
+                    <i class='fa fa-gamepad' style='font-size:36px; color: white; padding-right: 10px;'></i>
+                </a></li>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="./scripts.js"></script>
+    <script>
+        displayNewTrendingGames()
+        displayDiscountedGames()
+        filterByGenresGames()
+        filterByPriceGames()
+    </script>
+</body>
+
+</html>

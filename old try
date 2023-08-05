@@ -1,0 +1,360 @@
+// NAV BAR
+const toggleButton = document.getElementsByClassName('toggle_btn')[0]
+const navLinks = document.getElementsByClassName('nav_links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+}
+)
+
+// STICKY NAV BAR
+window.onscroll = function () { stickyNav() }
+
+var navBar = document.getElementsByClassName("nav_bar")
+var sticky = navBar.offsetTop;
+
+function stickyNav() {
+  if (window.scrollY >= sticky) {
+    navBar.classList.add("sticky")
+  }
+}
+
+//ACTIVE NAV BAR
+
+
+//JSON DATA
+fetch("./assets/games.json")
+  .then(response => response.json())
+  .then(games => {
+    localStorage.setItem("games", JSON.stringify(games))
+  })
+
+let container = document.querySelector(".container")
+let loadMoreBtn = document.querySelector(".load_more")
+
+let initialItems = 9
+let loadItems = 9
+
+var click1 = 1
+var click2 = 2
+var click3 = 3
+var click4 = 4
+var click5 = 5
+
+document.getElementById('sort_a_z').onclick = () => {
+  localStorage.setItem(1, click1),
+    location.reload()
+}
+
+document.getElementById('sort_z_a').onclick = () => {
+  localStorage.setItem(2, click2),
+    location.reload()
+}
+
+document.getElementById('sort_p_asc').onclick = () => {
+  localStorage.setItem(3, click3),
+    location.reload()
+}
+
+document.getElementById('sort_p_dec').onclick = () => {
+  localStorage.setItem(4, click4),
+    location.reload()
+}
+
+document.getElementById('sort_remove').onclick = () => {
+  localStorage.setItem(5, click5),
+    location.reload()
+}
+
+var clicks = 0
+
+function onClick() {
+  clicks += 1;
+  if (clicks == 1) {
+    document.getElementById("hideme1").style.display = "none"
+    document.getElementById("hideme2").remove()
+  }
+  else if (clicks == 2) {
+    document.getElementById("hideme3").remove()
+    document.getElementById("hideme3").style.display = "none"
+  }
+
+  console.log(clicks)
+}
+
+var clicked1 = localStorage.getItem(1)
+var clicked2 = localStorage.getItem(2)
+var clicked3 = localStorage.getItem(3)
+var clicked4 = localStorage.getItem(4)
+var clicked5 = localStorage.getItem(5)
+
+function loadInitialItems() {
+  let games = JSON.parse(localStorage.getItem("games"))
+
+  let card = ""
+  let counter = 0
+
+  if (clicked1 == 1) {
+    onClickSort(games)
+    localStorage.removeItem(1, clicked1)
+  }
+
+  if (clicked2 == 2) {
+    onClickReverseSort(games)
+    localStorage.removeItem(2, clicked2)
+  }
+
+  if (clicked3 == 3) {
+    onClickSortPriceAcs(games)
+    localStorage.removeItem(3, clicked3)
+  }
+
+  if (clicked4 == 4) {
+    onClickSortPriceDec(games)
+    localStorage.removeItem(4, clicked4)
+  }
+
+  if (clicked5 == 5) {
+    onClickSortId(games)
+    localStorage.removeItem(5, clicked5)
+  }
+
+  for (let game of games) {
+    if (counter < initialItems) {
+
+      card += `
+      <div class="col1 col-lg-3 m-4">
+        <div class="card h-100 card text-white bg-dark">
+          <img src="${game.image}" class="card-img-top" alt="${game.name}">
+          <div class="card-body">
+            <h5 class="card-title">${game.name}</h5>
+            <p class="card-text">&nbsp;&nbsp; ${game.description}</p>
+            <span class="genres_span">${(game.genres).join('/ ')}</span>
+          </div>
+          <div class="card-footer border-white">
+            <div class="inline_div" style="bottom:1.5rem; position:absolute;">${calcStars(game.rating)}</div>
+            <div class="inline_div1">
+              <button class="price_btn">
+                <i class="fa fa-shopping-cart" style="font-size: 26px;"></i> 
+                &nbsp; ${game.price} €
+              </bitton>
+            </div>
+          </div>
+        </div>
+      </div>`
+      var curr_dis = `<span class="how_many_items" id="hideme1">Currently showing items: ${counter + 1} &nbsp;&nbsp;</span>`
+
+    }
+    counter++
+  }
+
+  document.getElementById("catalog_div").insertAdjacentHTML('beforeend', card)
+  document.getElementById("sorting_stuff").insertAdjacentHTML('afterbegin', curr_dis)
+}
+
+
+function loadNewTrending() {
+  let games = JSON.parse(localStorage.getItem("games"))
+  let card = ""
+  for (let game of games) {
+    if (game.is_new == true && game.is_trending == true) {
+
+      card += `
+      <div class="col col-lg-3 m-4">
+        <div class="card h-100 card text-white bg-dark">
+          <img src="${game.image}" class="card-img-top" alt="${game.name}">
+          <div class="card-body">
+            <h5 class="card-title">${game.name}</h5>
+            <p class="card-text">&nbsp;&nbsp; ${game.description}</p>
+            <span class="genres_span">${(game.genres).join('/ ')}</span>
+          </div>
+          <div class="card-footer border-white">
+            <div class="inline_div" style="bottom:1.5rem; position:absolute;">${calcStars(game.rating)}</div>
+            <div class="inline_div1">
+              <button class="price_btn">
+                <i class="fa fa-shopping-cart" style="font-size: 26px;"></i> 
+                &nbsp; ${game.price} €
+              </bitton>
+            </div>
+          </div>
+        </div>
+      </div>`
+    }
+  }
+
+  document.getElementById("new_and_trending_div").insertAdjacentHTML('beforeend', card)
+}
+
+
+function loadTopSellers() {
+  let games = JSON.parse(localStorage.getItem("games"))
+  let card = ""
+  for (let game of games) {
+    if (game.is_top_selling == true) {
+
+      card += `
+      <div class="col col-lg-3 m-4">
+        <div class="card h-100 card text-white bg-dark">
+          <img src="${game.image}" class="card-img-top" alt="${game.name}">
+          <div class="card-body">
+            <h5 class="card-title">${game.name}</h5>
+            <p class="card-text">&nbsp;&nbsp; ${game.description}</p>
+            <span class="genres_span">${(game.genres).join('/ ')}</span>
+          </div>
+          <div class="card-footer border-white">
+            <div class="inline_div" style="bottom:1.5rem; position:absolute;">${calcStars(game.rating)}</div>
+            <div class="inline_div1">
+              <button class="price_btn">
+                <i class="fa fa-shopping-cart" style="font-size: 26px;"></i> 
+                &nbsp; ${game.price} €
+              </bitton>
+            </div>
+          </div>
+        </div>
+      </div>`
+    }
+  }
+
+  document.getElementById("top_sell_div").insertAdjacentHTML('beforeend', card)
+}
+
+
+
+function loadData() {
+  let games = JSON.parse(localStorage.getItem("games"))
+  let currentDisplayedItems = document.querySelectorAll(".col1").length
+
+  let card = ""
+  let counter = 0
+  for (let game of games) {
+    if (counter >= currentDisplayedItems && counter < loadItems + currentDisplayedItems) {
+
+      card += `
+      <div class="col1 col-lg-3 m-4">
+        <div class="card h-100 card text-white bg-dark">
+          <img src="${game.image}" class="card-img-top" alt="${game.name}">
+          <div class="card-body">
+            <h5 class="card-title">${game.name}</h5>
+            <p class="card-text">&nbsp;&nbsp; ${game.description}</p>
+            <span class="genres_span">${(game.genres).join('/ ')}</span>
+          </div>
+          <div class="card-footer border-white">
+            <div class="inline_div" style="bottom:1.5rem; position:absolute;">${calcStars(game.rating)}</div>
+            <div class="inline_div1">
+              <button class="price_btn">
+                <i class="fa fa-shopping-cart" style="font-size: 26px;"></i> 
+                &nbsp; ${game.price} €
+              </bitton>
+            </div>
+          </div>
+        </div>
+      </div>`
+
+      var curr_dis = `<span class="how_many_items" id="hideme2">Currently showing items: ${counter + 1} &nbsp;&nbsp;</span>`
+      var curr_dis1 = `<span class="how_many_items" id="hideme3">Currently showing items: ${counter + 1} &nbsp;&nbsp;</span>`
+    }
+    counter++
+  }
+
+  document.getElementById("catalog_div").insertAdjacentHTML('beforeend', card)
+  document.getElementById("sorting_stuff").insertAdjacentHTML('afterbegin', curr_dis)
+  document.getElementById("sorting_stuff").insertAdjacentHTML('afterbegin', curr_dis1)
+
+  if (document.querySelectorAll(".col1").length == games.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+}
+
+// SORT a-z
+function onClickSort(data) {
+  data = data.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+  })
+}
+
+
+//SORT z-a
+function onClickReverseSort(data) {
+  data = data.sort((a, b) => {
+    if (a.name > b.name) {
+      return -1;
+    }
+  })
+}
+
+//SORT price acs
+function onClickSortPriceAcs(data) {
+  data = data.sort((a, b) => {
+    if (a.price < b.price) {
+      return -1;
+    }
+  })
+}
+
+//SORT price decs
+function onClickSortPriceDec(data) {
+  data = data.sort((a, b) => {
+    if (a.price > b.price) {
+      return -1;
+    }
+  })
+}
+
+//SORT id (remove sorting)
+function onClickSortId(data) {
+  data = data.sort((a, b) => {
+    if (a.id < b.id) {
+      return -1;
+    }
+  })
+}
+
+//STARS
+function calcStars(data) {
+  var stars = ""
+  for (var i = 0; i < 5; i++) {
+    var icoClass = i < data ? "fa fa-star" : "fa fa-star-o";
+    stars += "<i class='" + icoClass + "'></i>";
+  }
+  return stars
+}
+
+//FILTER
+let games = JSON.parse(localStorage.getItem("games"))
+let div = document.getElementById("content_container")
+
+var filterAction = games.filter( element => element.genres.includes("Action"))
+console.log(filterAction)
+
+var filterAdventure = games.filter( element => element.genres.includes("Adventure"))
+console.log(filterAdventure)
+
+var filterRPG = games.filter( element => element.genres.includes("RPG"))
+console.log(filterRPG)
+
+var filterIndie = games.filter( element => element.genres.includes("Indie"))
+console.log(filterIndie)
+
+var filterSimulation = games.filter( element => element.genres.includes("Simulation"))
+console.log(filterSimulation)
+
+var filterStrategy = games.filter( element => element.genres.includes("Strategy"))
+console.log(filterStrategy)
+
+var filterCasual = games.filter( element => element.genres.includes("Casual"))
+console.log(filterCasual)
+
+// not exactly vanilla as there is one lodash function
+
+var checkbox = document.getElementById("action")
+checkbox.addEventListener( "change", () => {
+  if ( checkbox.checked == true ) {
+    for(let game of games){
+
+    }
+  } else {
+    
+  }
+})
