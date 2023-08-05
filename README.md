@@ -5,6 +5,9 @@ Hopium is hope about getting better at games after buying them. </br>
 This website's goal is about "selling" all those games. </br>
 I know it's not "the best" website but still I'm proud of it.
 
+## Requerments to run the project:
+- Visual Studio "Live Server" extension
+
 ## Tegnologies used:
 - HTML
 - CSS
